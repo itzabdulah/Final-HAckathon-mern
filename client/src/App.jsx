@@ -18,7 +18,7 @@ import PaymentSummary from './pages/PaymentSummary'
 import TicketPage from './pages/TicketPage'
 import CreatEvent from './pages/CreateEvent'
 
-axios.defaults.baseURL = 'https://eventserverabcodes.vercel.app/';
+axios.defaults.baseURL = 'http://localhost:4000/';
 axios.defaults.withCredentials = true;
 
 function App() {
