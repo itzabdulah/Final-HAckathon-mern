@@ -18,33 +18,33 @@ import PaymentSummary from './pages/PaymentSummary'
 import TicketPage from './pages/TicketPage'
 import CreatEvent from './pages/CreateEvent'
 
-axios.defaults.baseURL = 'http://localhost:4000/';
-axios.defaults.withCredentials=true;
+axios.defaults.baseURL = 'https://final-h-ackathon-mern-server.vercel.app/';
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <UserContextProvider> 
-    <Routes>
-            
-      <Route path='/' element={<Layout />}>
-        <Route index element = {<IndexPage />} />
-        <Route path='/useraccount' element = {<UserAccountPage />}/>
-        <Route path='/createEvent' element = {<AddEvent/>} />
-        <Route path='/event/:id' element= {<EventPage/>} />
-        <Route path='/calendar' element={<CalendarView />} />
-        <Route path='/wallet' element={<TicketPage />}/>
-        <Route path='/event/:id/ordersummary' element = {<OrderSummary />} />
-      </Route>
+    <UserContextProvider>
+      <Routes>
 
-      <Route path='/register' element={<RegisterPage />}/>
-      <Route path='/login' element={<LoginPage />}/>
-      <Route path='/forgotpassword' element = {<ForgotPassword/>} />
-      <Route path='/resetpassword' element = {<ResetPassword/>} />
-      <Route path='/event/:id/ordersummary/paymentsummary' element = {<PaymentSummary />} />
-      
-    
-    </Routes>
-    </UserContextProvider>  
+        <Route path='/' element={<Layout />}>
+          <Route index element={<IndexPage />} />
+          <Route path='/useraccount' element={<UserAccountPage />} />
+          <Route path='/createEvent' element={<AddEvent />} />
+          <Route path='/event/:id' element={<EventPage />} />
+          <Route path='/calendar' element={<CalendarView />} />
+          <Route path='/wallet' element={<TicketPage />} />
+          <Route path='/event/:id/ordersummary' element={<OrderSummary />} />
+        </Route>
+
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/forgotpassword' element={<ForgotPassword />} />
+        <Route path='/resetpassword' element={<ResetPassword />} />
+        <Route path='/event/:id/ordersummary/paymentsummary' element={<PaymentSummary />} />
+
+
+      </Routes>
+    </UserContextProvider>
   )
 }
 

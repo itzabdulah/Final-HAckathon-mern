@@ -19,10 +19,15 @@ const jwtSecret = "bsbsfbrnsftentwnnwnwn";
 
 app.use(express.json());
 app.use(cookieParser());
+
+app.get('/', (req, res) => {
+   res.json({ success: true, message: "api working" })
+})
+
 app.use(
    cors({
       credentials: true,
-      origin: "http://localhost:5173",
+      origin: "https://eventabcodes.netlify.app/",
    })
 );
 
